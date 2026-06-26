@@ -2561,6 +2561,12 @@ pub const NDA_IFINDEX: c_ushort = 8;
 
 pub const NLM_F_BULK: c_int = 0x200;
 
+pub const NLA_F_NESTED: c_int = 1 << 15;
+pub const NLA_F_NET_BYTEORDER: c_int = 1 << 14;
+pub const NLA_TYPE_MASK: c_int = !(NLA_F_NESTED | NLA_F_NET_BYTEORDER);
+
+pub const NLA_ALIGNTO: c_int = 4;
+
 // linux/rtnetlink.h
 pub const TCA_UNSPEC: c_ushort = 0;
 pub const TCA_KIND: c_ushort = 1;
